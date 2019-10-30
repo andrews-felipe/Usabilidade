@@ -7,6 +7,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { PainelGestorComponent } from './painel-gestor/painel-gestor.component';
 import { LoginComponent } from './login/login.component';
 import { CursoComponent } from './curso/curso.component';
+import { RankingComponent } from './ranking/ranking.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CursoComponent } from './curso/curso.component';
     CadastroComponent,
     PainelGestorComponent,
     LoginComponent,
-    CursoComponent
+    CursoComponent,
+    RankingComponent
   ],
   imports: [
     BrowserModule,

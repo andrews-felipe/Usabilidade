@@ -1,0 +1,25 @@
+.container-fluid {
+  width: 5%;
+  margin-right: inherit;
+  margin-left: unset;
+  height: 100pc;
+  margin-top: -3.5pc;
+}
+.bg-light {
+  background-color: white;
+  width: 75%;
+  margin-left: auto;
+  border-radius: 0px 30px 0p;
+}
+.table {
+  margin: auto;
+  color: #212529;
+  background-color: white;
+  margin-top: 5pc;
+  width: 75%;
+  border-radius: 30px;
+}
+.opcoes{
+  margin-top: -97pc;
+  margin-left: 5%;
+}
