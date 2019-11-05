@@ -1,3 +1,4 @@
+import { CriarCursoComponent } from './criar-curso/criar-curso.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: 'cadastro', component: CadastroComponent },
   { path: 'login', component: LoginComponent },
   { path: 'painel-gestor', component: PainelGestorComponent },
-  {path: 'ranking', component: RankingComponent}
+  {path: 'ranking', component: RankingComponent},
+  {path: 'criar-curso', component: CriarCursoComponent}
 
 ];
 

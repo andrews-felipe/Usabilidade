@@ -1,9 +1,9 @@
 .container-fluid {
-  width: 5%;
+  max-width: 48px;
   margin-right: inherit;
   margin-left: unset;
   height: 100pc;
-  margin-top: -4.0pc;
+  margin-top: -3.5pc;
 }
 .bg-light {
   background-color: white;
@@ -11,22 +11,14 @@
   margin-left: auto;
   border-radius: 0px 30px;
 }
-.table {
-  margin: auto;
-  color: #212529;
-  margin-top: 5pc;
-  width: 100%;
-}
 .opcoes{
   margin-top: -97pc;
-  margin-left: 5%;
+  margin-left: 48px;
 }
 .navbar-expand-lg .navbar-collapse {
   margin-left: 25%;
 }
-.ranking{
-  background-color: white;
-  border-radius: 15px;
+.cursos{
   width: 60%;
   margin: auto;
   margin-top: -7pc;
@@ -36,4 +28,19 @@
 }
 .text-right{
   margin-right: 18%;
+}
+.mb-3, .my-3{
+  border-radius: 30px;
+}
+.dropdown, .dropleft, .dropright, .dropup {
+  text-align: end;
+}
+.dropdown-toggle{
+  background-color:#463fdc;
+}
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  box-shadow: 9px 10px 10px #2125294d;
+  border-radius: 26px;
 }

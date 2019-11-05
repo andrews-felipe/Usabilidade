@@ -8,6 +8,7 @@ import { PainelGestorComponent } from './painel-gestor/painel-gestor.component';
 import { LoginComponent } from './login/login.component';
 import { CursoComponent } from './curso/curso.component';
 import { RankingComponent } from './ranking/ranking.component';
+import { CriarCursoComponent } from './criar-curso/criar-curso.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RankingComponent } from './ranking/ranking.component';
     PainelGestorComponent,
     LoginComponent,
     CursoComponent,
-    RankingComponent
+    RankingComponent,
+    CriarCursoComponent
   ],
   imports: [
     BrowserModule,

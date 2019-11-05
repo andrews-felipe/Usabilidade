@@ -11,12 +11,6 @@
   margin-left: auto;
   border-radius: 0px 30px;
 }
-.table {
-  margin: auto;
-  color: #212529;
-  margin-top: 5pc;
-  width: 100%;
-}
 .opcoes{
   margin-top: -97pc;
   margin-left: 5%;
@@ -36,4 +30,16 @@
 }
 .text-right{
   margin-right: 18%;
+}
+.form-control {
+  max-width: 50%;
+  border-radius: 10px;
+  margin-left: 5%;
+}
+.questoes{
+  margin-left: 5%;
+}
+.textarea {
+  width: 100%;
+  border-radius: 10px;
 }
