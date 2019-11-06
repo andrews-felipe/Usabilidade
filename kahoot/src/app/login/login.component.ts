@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  LogOn() {
+  login() {
     this.router.navigate(['painel-gestor']);
   }
   ngOnInit() {

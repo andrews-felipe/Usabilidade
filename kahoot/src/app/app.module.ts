@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { CursoComponent } from './curso/curso.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { CriarCursoComponent } from './criar-curso/criar-curso.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { UpbarComponent } from './components/upbar/upbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CriarCursoComponent } from './criar-curso/criar-curso.component';
     LoginComponent,
     CursoComponent,
     RankingComponent,
-    CriarCursoComponent
+    CriarCursoComponent,
+    MenuComponent,
+    UpbarComponent
   ],
   imports: [
     BrowserModule,

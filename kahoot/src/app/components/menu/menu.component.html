@@ -1,0 +1,86 @@
+<style>
+    .side-bar {
+        width: 50px;
+        height: 100%;
+        position: fixed;
+        padding: 15px 0 15px 0;
+    }
+
+    a {
+        width: 50px;
+        height: 55px;
+        text-align: center;
+        text-decoration: unset;
+    }
+
+    img {
+        width: 30px;
+    }
+
+    #menu-items {
+        position: absolute;
+        left: 85px;
+        top: 50px;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .link {
+        width: 100%;
+        display: flex;
+        text-align: initial;
+    }
+
+    span {
+        margin-top: 3px;
+        width: 40px;
+        text-align: center;
+    }
+
+    .meta {
+        text-transform: uppercase;
+        color: #A8B3C1;
+        font-weight: 800;
+    }
+</style>
+
+<div class="flex">
+    <div class="flex app-background-color side-bar">
+        <a routerLink="painel-gestor">
+            <img src="../../../assets/home-icon.svg" alt="Página Inicial">
+        </a>
+    </div>
+
+    <div class="flex" id="menu-items">
+
+        <a routerLink="#" class="link">
+            <span class="fa fa-pause"> </span>
+            <p>Dashboard</p>
+        </a>
+
+        <p class="meta">Menu</p>
+
+        <a routerLink="#" class="link">
+            <span class="fa fa-graduation-cap"> </span>
+            <p>Cursos</p>
+        </a>
+
+        <a routerLink="#" class="link">
+            <span class="fa fa-history"></span>
+            <p>Histórico</p>
+        </a>
+
+        <a routerLink="#" class="link">
+            <span class="fa fa-users"></span>
+            <p>Alunos</p>
+        </a>
+
+        <a routerLink="#" class="link">
+            <span class="fa fa-cog"></span>
+            <p>Config.</p>
+        </a>
+
+    </div>
+
+</div>

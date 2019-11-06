@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #F3F5F9 !important;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem !important;
+}
+
+.flex{
+    display: flex;
+    position: relative;
+}
+
+.btn-size-md{
+    width: 100px;
+    margin-left: 5px;
+}
+
+.btn-primary{
+    background-color : #4633FF !important;
+    border: none;
+}
+.btn-info{
+    background-color : #F1F5FB !important;
+    color: #4633FF;
+    border: none;
+}
+.btn-info:hover{
+    color: #4633FF;
+    border: solid 1px #bbb3ff;
+    
+}
+
+.app-background-color{
+    background-color : #4633FF !important;
+}
+
+.app-font-color{
+    color : #4633FF !important;
+}
+
+a{
+    color: #A8B3C1;
+}
+a:hover{
+    color : #4633FF !important;
+}
+
+.active{
+    color : #4633FF !important;
+}

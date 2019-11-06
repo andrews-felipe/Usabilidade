@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-curso',
-  templateUrl: './curso.component.html',
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
   styleUrls: []
 })
-export class CursoComponent implements OnInit {
+export class MenuComponent implements OnInit {
 
   constructor() { }
 
