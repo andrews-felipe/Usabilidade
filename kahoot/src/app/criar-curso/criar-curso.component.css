@@ -18,12 +18,12 @@
 .navbar-expand-lg .navbar-collapse {
   margin-left: 25%;
 }
-.ranking{
+.criar-curso{
   background-color: white;
   border-radius: 15px;
-  width: 60%;
-  margin: auto;
-  margin-top: -7pc;
+  width: 75%;
+  margin: initial;
+  margin-top: 10pc;
 }
 .text-primary{
   margin-left: 5%;
@@ -32,7 +32,7 @@
   margin-right: 18%;
 }
 .form-control {
-  max-width: 50%;
+  max-width: 75%;
   border-radius: 10px;
   margin-left: 5%;
 }
@@ -42,4 +42,13 @@
 .textarea {
   width: 100%;
   border-radius: 10px;
+}
+.fa-2x {
+  font-size: 2em;
+  color: #4633FF !important;
+  margin-left: 5%;
+}
+.flex-nowrap{
+  margin-top: 5%;
+  margin-left: 5%;
 }

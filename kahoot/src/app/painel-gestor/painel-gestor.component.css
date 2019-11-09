@@ -19,9 +19,13 @@
   margin-left: 25%;
 }
 .cursos{
-  width: 60%;
-  margin: auto;
-  margin-top: -7pc;
+  width: 90%;
+  margin: initial;
+  margin-top: 8pc;
+
+}
+.card-img {
+  max-width: 70%;
 }
 .text-primary{
   margin-left: 5%;

@@ -1,39 +1,18 @@
-.container-fluid {
-  width: 5%;
-  margin-right: inherit;
-  margin-left: unset;
-  height: 100pc;
-  margin-top: -4.0pc;
-}
-.bg-light {
-  background-color: white;
-  width: 75%;
-  margin-left: auto;
-  border-radius: 0px 30px;
-}
+
 .table {
   margin: auto;
   color: #212529;
   margin-top: 5pc;
   width: 100%;
 }
-.opcoes{
-  margin-top: -97pc;
-  margin-left: 5%;
-}
-.navbar-expand-lg .navbar-collapse {
-  margin-left: 25%;
-}
 .ranking{
   background-color: white;
   border-radius: 15px;
-  width: 60%;
-  margin: auto;
-  margin-top: -7pc;
+  width: 80%;
+  margin: initial;
+  margin-top: 10pc;
 }
-.text-primary{
+
+.text{
   margin-left: 5%;
-}
-.text-right{
-  margin-right: 18%;
 }
