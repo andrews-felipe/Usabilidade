@@ -28,13 +28,14 @@
 .text-primary{
   margin-left: 5%;
 }
-.text-right{
-  margin-right: 18%;
-}
-.form-control {
-  max-width: 75%;
-  border-radius: 10px;
+.text-left{
   margin-left: 5%;
+  margin-top: 5%;
+}
+.form-control{
+  margin: auto;
+  width: 75%;
+  margin-bottom: 5%;
 }
 .questoes{
   margin-left: 5%;
