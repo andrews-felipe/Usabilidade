@@ -1,21 +1,31 @@
 
 .table {
-  margin: auto;
+  margin-left: 5%;
   color: #212529;
   margin-top: 5pc;
   width: 100%;
 }
 .ranking{
   background-color: white;
-  border-radius: 15px;
-  width: 80%;
+  border-radius: 20px;
+  width: 90%;
   margin-top: 10pc;
 }
  
 .text{
   color:#4633FF !important;
 }
-.titles{
+#titles{
   margin-left: 5%;
-  margin-top: 5pc;
+  margin-top: 5%;
+  margin-bottom: -5%;
+}
+#ouro{
+  color: yellow;
+}
+#prata{
+  color: thistle;
+}
+#bronze{
+  color: brown;
 }
