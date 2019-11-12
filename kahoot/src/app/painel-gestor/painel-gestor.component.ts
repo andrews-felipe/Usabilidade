@@ -3,16 +3,12 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-painel-gestor',
-  templateUrl: './painel-gestor.component.html',
-  styleUrls: ['./painel-gestor.component.css']
+  templateUrl: './painel-gestor.component.html'
 })
 export class PainelGestorComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
-  LogOn() {
-    this.router.navigate(['painel-gestor']);
-  }
   ngOnInit() {
   }
 

@@ -11,6 +11,7 @@ import { RankingComponent } from './ranking/ranking.component';
 import { CriarCursoComponent } from './criar-curso/criar-curso.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { UpbarComponent } from './components/upbar/upbar.component';
+import { MenuService } from './components/menu/menu.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { UpbarComponent } from './components/upbar/upbar.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
