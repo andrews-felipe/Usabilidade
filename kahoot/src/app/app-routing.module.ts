@@ -1,3 +1,4 @@
+
 import { PainelAlunoComponent } from './painel-aluno/painel-aluno.component';
 import { CriarCursoComponent } from './criar-curso/criar-curso.component';
 import { RankingComponent } from './ranking/ranking.component';
@@ -25,3 +26,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

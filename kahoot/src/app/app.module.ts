@@ -25,7 +25,8 @@ import { PainelAlunoComponent } from './painel-aluno/painel-aluno.component';
     RankingComponent,
     CriarCursoComponent,
     MenuComponent,
-    UpbarComponent
+    UpbarComponent,
+    PainelAlunoComponent
   ],
   imports: [
     BrowserModule,
