@@ -96,3 +96,13 @@ a:hover{
 .material-switch>input[type="checkbox"]:checked+label::after {
     left: 20px;
 }
+.modal-footer{
+    border-top: unset;
+}
+.modal-header{
+    border-bottom: unset;
+}
+
+.modal-content{
+    padding: 25px;
+}
