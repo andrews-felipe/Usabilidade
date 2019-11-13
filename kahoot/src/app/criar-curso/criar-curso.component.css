@@ -24,9 +24,10 @@
 .criar-curso{
   background-color: white;
   border-radius: 15px;
-  width: 75%;
+  width: 90%;
   margin: initial;
-  margin-top: 10pc;
+  margin-top: 5pc;
+  
 }
 .text-primary{
   margin-left: 5%;
@@ -36,10 +37,23 @@
   margin-left: 5%;
   margin-top: 5%;
 }
+.form-controlCurso{
+  margin: auto;
+  width: 85%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
 .form-control{
   margin: auto;
-  width: 75%;
+  width: 100%;
   margin-bottom: 5%;
+}
+
+.form-controlBox{
+  margin: auto;
+  width: 90%;
+  margin-bottom: 0%;
 }
 
 .form-RadiosBox{
@@ -65,4 +79,13 @@
 .flex-nowrap{
   margin-top: 5%;
   margin-left: 5%;
+}
+.btn-group{
+  margin-bottom: 1%;
+  width: 90%;
+}
+.input-group-text{
+  background-color:#4633FF !important;
+  color: white;
+  height: 2.4pc;
 }
