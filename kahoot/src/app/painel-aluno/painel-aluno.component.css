@@ -1,0 +1,10 @@
+.mb-3{
+    width: 50%;
+    margin-top: 10pc;
+    margin-left: auto;
+    margin-right: auto;
+}
+.table-bordered{
+    background-color: white;
+    width: 90%;
+}

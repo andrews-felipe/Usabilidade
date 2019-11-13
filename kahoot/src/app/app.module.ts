@@ -11,6 +11,7 @@ import { RankingComponent } from './ranking/ranking.component';
 import { CriarCursoComponent } from './criar-curso/criar-curso.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { UpbarComponent } from './components/upbar/upbar.component';
+import { PainelAlunoComponent } from './painel-aluno/painel-aluno.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UpbarComponent } from './components/upbar/upbar.component';
     RankingComponent,
     CriarCursoComponent,
     MenuComponent,
-    UpbarComponent
+    UpbarComponent,
+    PainelAlunoComponent
   ],
   imports: [
     BrowserModule,

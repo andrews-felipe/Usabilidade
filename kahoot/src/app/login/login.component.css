@@ -1,7 +1,9 @@
 html {
   background-color: #56baed;
 }
-
+.left-flex[_ngcontent-jpv-c0] {
+  display: none;
+}
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
