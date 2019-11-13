@@ -17,6 +17,7 @@
         width: 30px;
     }
 
+
     #menu-items {
         position: absolute;
         left: 85px;
@@ -53,33 +54,14 @@
     </div>
 
     <div class="flex" id="menu-items">
-
-        <a routerLink="#" class="link">
-            <span class="fa fa-pause"> </span>
-            <p>Dashboard</p>
-        </a>
-
         <p class="meta">Menu</p>
-
-        <a routerLink="#" class="link">
-            <span class="fa fa-graduation-cap"> </span>
-            <p>Cursos</p>
+        
+        <!-- Listando itens do menu pelo service -->
+        <a routerLink="#" class="link" *ngFor="let item of service.menu" [ngClass]="{ 'active': item.active == true }">
+            <span class="{{item.class}}"></span>
+            <p>{{item.name}}</p>
         </a>
 
-        <a routerLink="#" class="link">
-            <span class="fa fa-history"></span>
-            <p>Histórico</p>
-        </a>
-
-        <a routerLink="#" class="link">
-            <span class="fa fa-users"></span>
-            <p>Alunos</p>
-        </a>
-
-        <a routerLink="#" class="link">
-            <span class="fa fa-cog"></span>
-            <p>Config.</p>
-        </a>
 
     </div>
 

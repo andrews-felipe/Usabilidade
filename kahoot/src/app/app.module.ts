@@ -11,6 +11,7 @@ import { RankingComponent } from './ranking/ranking.component';
 import { CriarCursoComponent } from './criar-curso/criar-curso.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { UpbarComponent } from './components/upbar/upbar.component';
+import { MenuService } from './components/menu/menu.service';
 import { PainelAlunoComponent } from './painel-aluno/painel-aluno.component';
 
 @NgModule({
@@ -18,19 +19,19 @@ import { PainelAlunoComponent } from './painel-aluno/painel-aluno.component';
     AppComponent,
     CadastroComponent,
     PainelGestorComponent,
+    PainelAlunoComponent,
     LoginComponent,
     CursoComponent,
     RankingComponent,
     CriarCursoComponent,
     MenuComponent,
-    UpbarComponent,
-    PainelAlunoComponent
+    UpbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
