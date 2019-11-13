@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { PainelGestorComponent } from './painel-gestor/painel-gestor.component';
-import{ CursoComponent} from './curso/curso.component';
 
 
 const routes: Routes = [
@@ -15,8 +14,7 @@ const routes: Routes = [
   { path: 'painel-gestor', component: PainelGestorComponent },
   {path: 'ranking', component: RankingComponent},
   {path: 'criar-curso', component: CriarCursoComponent},
-  {path: 'painel-aluno', component: PainelAlunoComponent},
-  {path: 'curso', component: CursoComponent}
+  {path: 'painel-aluno', component: PainelAlunoComponent}
 
 ];
 
