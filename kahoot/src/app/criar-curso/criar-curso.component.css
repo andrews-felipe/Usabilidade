@@ -5,6 +5,9 @@
   height: 100pc;
   margin-top: -4.0pc;
 }
+.fa-2x{
+  color: #4633FF;
+}
 .bg-light {
   background-color: white;
   width: 75%;
@@ -18,23 +21,25 @@
 .navbar-expand-lg .navbar-collapse {
   margin-left: 25%;
 }
-.ranking{
+.criar-curso{
   background-color: white;
   border-radius: 15px;
-  width: 60%;
-  margin: auto;
-  margin-top: -7pc;
+  width: 75%;
+  margin: initial;
+  margin-top: 10pc;
 }
 .text-primary{
   margin-left: 5%;
+  color: #4633FF !important;
 }
-.text-right{
-  margin-right: 18%;
-}
-.form-control {
-  max-width: 50%;
-  border-radius: 10px;
+.text-left{
   margin-left: 5%;
+  margin-top: 5%;
+}
+.form-control{
+  margin: auto;
+  width: 75%;
+  margin-bottom: 5%;
 }
 .questoes{
   margin-left: 5%;
@@ -42,4 +47,13 @@
 .textarea {
   width: 100%;
   border-radius: 10px;
+}
+.fa-2x {
+  font-size: 2em;
+  color: #4633FF !important;
+  margin-left: 5%;
+}
+.flex-nowrap{
+  margin-top: 5%;
+  margin-left: 5%;
 }

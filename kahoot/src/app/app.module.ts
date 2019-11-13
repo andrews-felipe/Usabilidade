@@ -12,12 +12,14 @@ import { CriarCursoComponent } from './criar-curso/criar-curso.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { UpbarComponent } from './components/upbar/upbar.component';
 import { MenuService } from './components/menu/menu.service';
+import { PainelAlunoComponent } from './painel-aluno/painel-aluno.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroComponent,
     PainelGestorComponent,
+    PainelAlunoComponent,
     LoginComponent,
     CursoComponent,
     RankingComponent,

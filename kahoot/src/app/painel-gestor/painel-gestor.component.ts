@@ -7,6 +7,26 @@ import { Router } from '@angular/router';
 })
 export class PainelGestorComponent implements OnInit {
 
+  readonly itens = [
+    {
+      image: '../../assets/java.jpg',
+      title: 'Orientação objetos com java',
+      questions: 3
+    },
+    {
+      image: '../../assets/nodeJs.png',
+      title: 'Introdução ao Node.js',
+      questions: 8
+    },
+    {
+      image: '../../assets/vuejs.jpg',
+      title: 'Micro Front-ends com Vue.js',
+      questions: 4
+    }
+
+  ]
+
+
   constructor() { }
 
   ngOnInit() {
