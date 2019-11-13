@@ -1,174 +1,360 @@
 <style>
-    .flex {
-        display: flex;
-        margin-top: 2rem;
-    }
-
-    .box-container {
-        display: flex;
-        width: 75%;
-        height: 100%;
-        flex-direction: column;
-        position: fixed;
-        background-color: #ffffff;
-        border-radius: 20px;
-        border: solid 1px #efefef;
-    }
-
-    .box-header {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        padding: 30px;
-        transition: 0.2s;
-    }
-
-    .info {
-        padding-left: 20px;
-        display: flex;
-        flex-direction: column;
-        height: 130px;
-    }
-
-    .info h3 {
-        color: #585858;
-        font-weight: 700;
-        font-size: 1.40rem;
-    }
-
-    .info p {
-        color: #a7a7a7;
-        margin-bottom: 10.5px;
-    }
-
-    .avatar-img {
-        width: 130px;
-        height: 130px;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: solid 1px gainsboro;
-    }
-
-    .avatar-img img {
-        max-width: 100%;
-    }
-
-    .dropdown {
-        position: absolute;
-        right: 30px;
-    }
-
-    .dropdown-item {
-        color: #6d6d6d;
-    }
-
-    .btn-small-size {
-        font-size: 0.8rem;
-        width: 170px;
-    }
-
-    thead {
-        border-bottom: solid 2px #f1f5fb;
-    }
-
-    .box-table {
-        padding: 30px;
-    }
-
-    thead th {
-        color: gray;
-    }
-
-    .td-options {
-        padding: 3px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .td-options button {
-        font-size: 1.2rem;
-        color: #A8B3C1;
-    }
-
-    .td-options button:hover {
-        color: #4633ff;
-    }
-    table{
-        font-size: 0.77rem;
-    }
-</style>
-
-<div class="flex">
-
-    <div class="box-container">
-
-        <div class="box-header">
-            <div class="avatar-img">
-                <img [src]="course.image" alt="imagem-curso">
+        .flex {
+            display: flex;
+            margin-top: 2rem;
+        }
+    
+        .box-container {
+            display: flex;
+            width: 75%;
+            height: 100%;
+            flex-direction: column;
+            position: fixed;
+            background-color: #ffffff;
+            border-radius: 20px;
+            border: solid 1px #efefef;
+        }
+    
+        .box-header {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            padding: 30px;
+            transition: 0.2s;
+        }
+    
+        .info {
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 130px;
+        }
+    
+        .info h3 {
+            color: #585858;
+            font-weight: 700;
+            font-size: 1.40rem;
+        }
+    
+        .info p {
+            color: #a7a7a7;
+            margin-bottom: 10.5px;
+        }
+    
+        .avatar-img {
+            width: 130px;
+            height: 130px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 1px gainsboro;
+        }
+    
+        .avatar-img img {
+            max-width: 100%;
+        }
+    
+        .dropdown {
+            position: absolute;
+            right: 30px;
+        }
+    
+        .dropdown-item {
+            color: #6d6d6d;
+        }
+    
+        .btn-small-size {
+            font-size: 0.8rem;
+            width: 170px;
+        }
+    
+        thead {
+            border-bottom: solid 2px #f1f5fb;
+        }
+    
+        .box-table,
+        .container-padding {
+            padding: 30px;
+        }
+    
+        thead th {
+            color: gray;
+        }
+    
+        .td-options {
+            padding: 3px;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .td-options button {
+            font-size: 1.2rem;
+            color: #A8B3C1;
+        }
+    
+        .td-options button:hover {
+            color: #4633ff;
+        }
+    
+        table {
+            font-size: 0.77rem;
+        }
+    
+        .btn-back {
+            font-size: 2rem;
+            color: #4633ff;
+        }
+    
+        .header-create {
+            display: flex;
+            align-items: center;
+            color: #4633ff;
+        }
+    
+        #text-back-page {
+            margin: 15px;
+        }
+    
+        .meta-create {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 20px 0px 0px;
+        }
+    
+        .form-create {
+            padding: 20px;
+        }
+    
+        .form-control {
+            background-color: #f3f5f9;
+        }
+    
+        .meta-info-create {
+            display: flex;
+            font-size: 1.3rem;
+            padding: 20px;
+        }
+    
+        .btn-plus {
+            font-size: 3rem;
+            color: #4633ff;
+        }
+    
+        .list-questions {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .question {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            font-size: 1.5rem;
+        }
+    
+        .question div {
+            display: flex;
+        }
+    
+        .question button {
+            font-size: 1.5rem;
+        }
+    </style>
+    
+    <div class="flex">
+    
+        <div class="box-container">
+    
+            <div id="info-course-flow" *ngIf="!view_flag">
+                <div class="box-header">
+                    <div class="avatar-img">
+                        <img [src]="course.image" alt="imagem-curso">
+                    </div>
+                    <div class="info">
+                        <h3>{{course.title}}</h3>
+                        <p>{{course.questions}} Questionários</p>
+                        <p class="text-dark font-weight-bold">{{course.code}}</p>
+                        <button class="btn btn-primary btn-small-size" (click)="view_flag = true">Adicionar
+                            questionário</button>
+                    </div>
+                    <div class="dropdown dropleft">
+                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-eraser" aria-hidden="true"></i> Renomear</a>
+                            <a class="dropdown-item" routerLink="/ranking"><i class="fa fa-users" aria-hidden="true"></i>
+                                Ranking</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-table">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Status</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Qntd. Questões</th>
+                                <th scope="col">Data Criação</th>
+                                <th scope="col" class="text-center">Opções</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of content">
+                                <th scope="row">
+                                    <div class="material-switch">
+                                        <input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox" />
+                                        <label for="someSwitchOptionPrimary" class="label-primary"></label>
+                                    </div>
+                                </th>
+                                <td>{{item.title}}</td>
+                                <td>{{item.qntd}}</td>
+                                <td>{{item.createdAt}}</td>
+                                <td class="td-options">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn"><span class="fa fa-list"
+                                                aria-hidden="true"></span></button>
+                                        <button type="button" class="btn"><span class="fa fa-trash"
+                                                aria-hidden="true"></span></button>
+                                        <button type="button" class="btn"><span class="fa fa-pencil"
+                                                aria-hidden="true"></span></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
             </div>
-            <div class="info">
-                <h3>{{course.title}}</h3>
-                <p>{{course.questions}} Questionários</p>
-                <p class="text-dark font-weight-bold">{{course.code}}</p>
-                <button class="btn btn-primary btn-small-size">Adicionar questionário</button>
+    
+            <div id="create-questionary-flow" *ngIf="view_flag" class="container-padding">
+    
+                <div class="header-create">
+                    <button (click)="view_flag = false" type="button" class="btn btn-back"><span class="fa fa-arrow-left"
+                            aria-hidden="true"></span></button>
+                    <h5 id="text-back-page">Criar questionário</h5>
+    
+                </div>
+    
+                <div class="meta-create">
+                    <div class="meta-info-create">
+                        <p class="text-muted">Curso:  </p>
+                        <p>{{course.title}}</p>
+                    </div>
+    
+                    <div class="btn-submit">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="form-create">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nome</label>
+                        <input type="text" class="form-control" placeholder="Digite um nome para o questionário">
+                        <small id="emailHelp" class="form-text text-muted">O nome deve ser de fácil identificação.</small>
+                    </div>
+                </div>
+                <hr>
+    
+                <div class="list-questions">
+                    Adicionar questão
+                    <button class="btn btn-plus" type="button" data-toggle="modal" data-target="#modal"><span
+                            class="fa fa-plus-circle" aria-hidden="true"></span></button>
+                    <div class="question" *ngFor="let item of questions">
+                        <div>
+                            <p class="text-muted">{{item.id}}:  </p>
+                            <p>{{item.name}}</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn"><span class="fa fa-trash" aria-hidden="true"></span></button>
+                            <button type="button" class="btn"><span class="fa fa-pencil" aria-hidden="true"></span></button>
+                        </div>
+                    </div>
+    
+    
+                </div>
+    
             </div>
-            <div class="dropdown dropleft">
-                <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-eraser" aria-hidden="true"></i> Renomear</a>
-                    <a class="dropdown-item" routerLink="/ranking"><i class="fa fa-users" aria-hidden="true"></i>
-                        Ranking</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</a>
+    
+    
+        </div>
+    
+    
+    </div>
+    
+    
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Adicionar Questão</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nome</label>
+                        <input type="text" class="form-control" placeholder="Digite um nome da questão"
+                            [(ngModel)]="question_name">
+                        <small id="emailHelp" class="form-text text-muted">Deve ser uma pergunta.</small>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox" aria-label="Resposta">
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with radio button"
+                            placeholder="Resposta">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox" aria-label="Resposta">
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with radio button"
+                            placeholder="Resposta">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox" aria-label="Resposta">
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with radio button"
+                            placeholder="Resposta">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox" aria-label="Resposta">
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with radio button"
+                            placeholder="Resposta">
+                    </div>
+    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="add()">Adicionar</button>
                 </div>
             </div>
         </div>
-
-        <div class="box-table">
-            <table class="table table-borderless">
-                <thead>
-                    <tr>
-                        <th scope="col">Status</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Qntd. Questões</th>
-                        <th scope="col">Data Criação</th>
-                        <th scope="col" class="text-center">Opções</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of content">
-                        <th scope="row">
-                            <div class="material-switch">
-                                <input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox" />
-                                <label for="someSwitchOptionPrimary" class="label-primary"></label>
-                            </div>
-                        </th>
-                        <td>{{item.title}}</td>
-                        <td>{{item.qntd}}</td>
-                        <td>{{item.createdAt}}</td>
-                        <td class="td-options">
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn"><span class="fa fa-list"
-                                        aria-hidden="true"></span></button>
-                                <button type="button" class="btn"><span class="fa fa-trash"
-                                        aria-hidden="true"></span></button>
-                                <button type="button" class="btn"><span class="fa fa-pencil"
-                                        aria-hidden="true"></span></button>
-                            </div>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-
     </div>
-
-
-</div>
-
