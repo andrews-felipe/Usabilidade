@@ -45,9 +45,9 @@ export class MenuService {
    * @param name nome do item do menu.
    */
   setStatusMenuItem(name: string) {
-    for (const item in this.menu) {
-      if (item[name] === name) {
-        this.menu[name].active = true;
+    for (let i = 0; i < this.menu.length; i++) {
+      if (this.menu[i].name === name) {
+        this.menu[i].active = true;
       }
     }
   }
@@ -55,9 +55,9 @@ export class MenuService {
   /**
    * Retorna o nome do item ativo para o upbar component mostrar o label
    */
-  get activeMenu(){
+  get activeMenu() {
     for (const item in this.menu) {
-      if(item['active'])return item['name']
+      if (item['active']) return item['name']
     }
   }
 }

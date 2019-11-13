@@ -17,6 +17,7 @@
         width: 30px;
     }
 
+
     #menu-items {
         position: absolute;
         left: 85px;
@@ -56,8 +57,8 @@
         <p class="meta">Menu</p>
         
         <!-- Listando itens do menu pelo service -->
-        <a routerLink="#" class="link" *ngFor="let item of service.menu">
-            <span class="{{item.class}}"> </span>
+        <a routerLink="#" class="link" *ngFor="let item of service.menu" [ngClass]="{ 'active': item.active == true }">
+            <span class="{{item.class}}"></span>
             <p>{{item.name}}</p>
         </a>
 
