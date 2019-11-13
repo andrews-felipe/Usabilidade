@@ -40,5 +40,4 @@ export class CursoComponent implements OnInit {
     this.question_name = ""
     console.log(this.questions)
   }
-
 }
