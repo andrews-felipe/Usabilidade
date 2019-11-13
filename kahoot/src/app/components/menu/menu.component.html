@@ -57,7 +57,7 @@
         <p class="meta">Menu</p>
         
         <!-- Listando itens do menu pelo service -->
-        <a routerLink="#" class="link" *ngFor="let item of service.menu" [ngClass]="{ 'active': item.active == true }">
+        <a routerLink="{{item.route}}" class="link" *ngFor="let item of service.menu" [ngClass]="{ 'active': item.active == true }">
             <span class="{{item.class}}"></span>
             <p>{{item.name}}</p>
         </a>

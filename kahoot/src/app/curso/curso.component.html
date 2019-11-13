@@ -1,1 +1,173 @@
-<p>curso works!</p>
+<style>
+    .flex {
+        display: flex;
+        margin-top: 2rem;
+    }
+
+    .box-container {
+        display: flex;
+        width: 75%;
+        height: 100%;
+        flex-direction: column;
+        position: fixed;
+        background-color: #ffffff;
+        border-radius: 20px;
+        border: solid 1px #efefef;
+    }
+
+    .box-header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 30px;
+        transition: 0.2s;
+    }
+
+    .info {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        height: 130px;
+    }
+
+    .info h3 {
+        color: #585858;
+        font-weight: 700;
+        font-size: 1.40rem;
+    }
+
+    .info p {
+        color: #a7a7a7;
+        margin-bottom: 10.5px;
+    }
+
+    .avatar-img {
+        width: 130px;
+        height: 130px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px gainsboro;
+    }
+
+    .avatar-img img {
+        max-width: 100%;
+    }
+
+    .dropdown {
+        position: absolute;
+        right: 30px;
+    }
+
+    .dropdown-item {
+        color: #6d6d6d;
+    }
+
+    .btn-small-size {
+        font-size: 0.8rem;
+        width: 170px;
+    }
+
+    thead {
+        border-bottom: solid 2px #f1f5fb;
+    }
+
+    .box-table {
+        padding: 30px;
+    }
+
+    thead th {
+        color: gray;
+    }
+
+    .td-options {
+        padding: 3px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .td-options button {
+        font-size: 1.2rem;
+        color: #A8B3C1;
+    }
+
+    .td-options button:hover {
+        color: #4633ff;
+    }
+    table{
+        font-size: 0.77rem;
+    }
+</style>
+
+<div class="flex">
+
+    <div class="box-container">
+
+        <div class="box-header">
+            <div class="avatar-img">
+                <img [src]="course.image" alt="imagem-curso">
+            </div>
+            <div class="info">
+                <h3>{{course.title}}</h3>
+                <p>{{course.questions}} Questionários</p>
+                <p class="text-dark font-weight-bold">{{course.code}}</p>
+                <button class="btn btn-primary btn-small-size">Adicionar questionário</button>
+            </div>
+            <div class="dropdown dropleft">
+                <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-eraser" aria-hidden="true"></i> Renomear</a>
+                    <a class="dropdown-item" routerLink="/ranking"><i class="fa fa-users" aria-hidden="true"></i>
+                        Ranking</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-table">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Status</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Qntd. Questões</th>
+                        <th scope="col">Data Criação</th>
+                        <th scope="col" class="text-center">Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of content">
+                        <th scope="row">
+                            <div class="material-switch">
+                                <input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox" />
+                                <label for="someSwitchOptionPrimary" class="label-primary"></label>
+                            </div>
+                        </th>
+                        <td>{{item.title}}</td>
+                        <td>{{item.qntd}}</td>
+                        <td>{{item.createdAt}}</td>
+                        <td class="td-options">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn"><span class="fa fa-list"
+                                        aria-hidden="true"></span></button>
+                                <button type="button" class="btn"><span class="fa fa-trash"
+                                        aria-hidden="true"></span></button>
+                                <button type="button" class="btn"><span class="fa fa-pencil"
+                                        aria-hidden="true"></span></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</div>
