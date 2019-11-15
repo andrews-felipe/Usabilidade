@@ -1,22 +1,24 @@
 <div class="criar-curso">
   <h5 class="text-primary"><a routerLink="/painel-gestor"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;Criar Curso</h5>
   <h5 class="text-left">Nome do Curso:</h5>
-  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+    <input type="text" class="form-controlCurso" aria-label="Text input with dropdown button">
   <div class="questoes">
-    <h6>1-Quais os tipos de forma que garante a separação por camada na aplicação
+    <h6>1 - Quais os tipos de forma que garante a separação por camada na aplicação
       <a href="#"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
 	  <a href="#"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></h6>
-	<h6>2-Quais são os tipos de dados
+	<h6>2 - Quais são os tipos de dados
 	<a href="#"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
 	<a href="#"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></h6>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar Nova Questão</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar Questão</button>
     </div>
+    &nbsp;
+    &nbsp;
+    &nbsp;
   </div>
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <a href="#"><img src="https://icon-icons.com/icons2/1320/PNG/48/-gallery_86860.png"></a>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -24,6 +26,16 @@
         <div class="modal-body">
           <h6>Título</h6>
           <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="addon-wrapping">
+          <div class="input-group mb-3">
+            <img src="../../assets/galleryIcon.png">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile02">
+              <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Escolha uma foto ou vídeo</label>
+            </div>
+            <div class="input-group-append">
+              <span class="input-group-text" id="inputGroupFileAddon02">Upload</span> 
+            </div>
+          </div>
           <h6>Conteúdo</h6>
           <textarea class="textarea" id="exampleFormControlTextarea1" rows="3"></textarea>
           <h6>Resposta</h6>
@@ -33,7 +45,7 @@
                 <input type="checkbox" aria-label="Radio button for following text input">
               </div>
             </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button">
+            <input type="text" class="form-controlBox" aria-label="Text input with radio button">
           </div>
           <div class="input-group">
             <div class="input-group-prepend">
@@ -41,7 +53,7 @@
                 <input type="checkbox" aria-label="Radio button for following text input">
               </div>
             </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button">
+            <input type="text" class="form-controlBox" aria-label="Text input with radio button">
           </div>
           <div class="input-group">
             <div class="input-group-prepend">
@@ -49,21 +61,45 @@
                 <input type="checkbox" aria-label="Radio button for following text input">
               </div>
             </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button">
+            <input type="text" class="form-controlBox" aria-label="Text input with radio button">
           </div>
-        </div>
-        <div class="btn-group" style="width: 50%;">
-          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Nível
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Difícil</a>
-            <a class="dropdown-item" href="#">Avançado</a>
-            <a class="dropdown-item" href="#">Médio</a>
-            <a class="dropdown-item" href="#">Fácil</a>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Difícil</label>
           </div>
-          <button type="button" class="btn btn-primary"  data-dismiss="modal">Adicionar Questão</button>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Médio</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Fácil</label>
+          </div>
+        
         </div>
+        <div class="btn-group" style="width: 100%;">
+          &nbsp;
+          <button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
+          &nbsp;
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          &nbsp;
+        </div>
+    
       </div>
 	</div>
 </div>
