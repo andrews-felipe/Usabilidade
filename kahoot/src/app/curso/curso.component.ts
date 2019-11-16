@@ -11,7 +11,7 @@ export class CursoComponent implements OnInit {
   readonly title = "Cursos"
 
   question_name : string
-  course : Object
+  course
   view_flag : boolean
   iterator : number = 1
   
@@ -38,6 +38,5 @@ export class CursoComponent implements OnInit {
     this.questions.push({id : this.iterator, name : this.question_name})
     this.iterator++;
     this.question_name = ""
-    console.log(this.questions)
   }
 }

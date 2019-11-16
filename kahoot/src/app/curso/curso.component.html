@@ -167,7 +167,6 @@
 <div class="flex">
 
     <div class="box-container">
-
         <div id="info-course-flow" *ngIf="!view_flag">
             <div class="box-header">
                 <div class="avatar-img">
@@ -203,14 +202,14 @@
                             <th scope="col">Qntd. Questões</th>
                             <th scope="col">Data Criação</th>
                             <th scope="col" class="text-center">Opções</th>
-                        </tr>
+                        </tr> 
                     </thead>
                     <tbody>
-                        <tr *ngFor="let item of content">
+                        <tr *ngFor="let item of content; let i = index">
                             <th scope="row">
                                 <div class="material-switch">
-                                    <input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox" />
-                                    <label for="someSwitchOptionPrimary" class="label-primary"></label>
+                                    <input id="someSwitchOptionPrimary{{i}}" type="checkbox"/>
+                                    <label for="someSwitchOptionPrimary{{i}}" class="label-primary"></label>
                                 </div>
                             </th>
                             <td>{{item.title}}</td>
@@ -244,7 +243,7 @@
 
             <div class="meta-create">
                 <div class="meta-info-create">
-                    <p class="text-muted">Curso:  </p>
+                    <p class="text-muted">Curso: </p>
                     <p>{{course.title}}</p>
                 </div>
 
@@ -270,7 +269,7 @@
                         class="fa fa-plus-circle" aria-hidden="true"></span></button>
                 <div class="question" *ngFor="let item of questions">
                     <div>
-                        <p class="text-muted">{{item.id}}:  </p>
+                        <p class="text-muted">{{item.id}}: </p>
                         <p>{{item.name}}</p>
                     </div>
                     <div>
@@ -278,15 +277,9 @@
                         <button type="button" class="btn"><span class="fa fa-pencil" aria-hidden="true"></span></button>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
-
-
     </div>
-
 
 </div>
 
