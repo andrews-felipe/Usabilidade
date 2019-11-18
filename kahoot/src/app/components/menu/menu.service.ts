@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ChangeDetectorRef } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,16 +7,19 @@ import { Injectable } from '@angular/core';
 export class MenuService {
 
 
+  eventSearch: Subject<any> = new Subject<any>();
+
+
   public menu = [
     {
       name: "Dashboard",
-      route: 'painel-gestor',
+      route: 'dashboard',
       class: "fa fa-pause",
       active: false
     },
     {
       name: "Cursos",
-      route: 'painel-gestor',
+      route: 'listagem-cursos',
       class: "fa fa-graduation-cap",
       active: false
     },
@@ -39,6 +43,8 @@ export class MenuService {
     }
   ]
 
+  constructor() { }
+
   /**
    * Método que altera o status "active" do menu, a finalidade é deixar
    * ativo o item referente a página acessada
@@ -61,13 +67,20 @@ export class MenuService {
       if (item['active']) return item['name']
     }
   }
-  
+
   /**
    * Método para alterar todos os status "active" do menu para false
    */
-  private resetMenu(){
-    this.menu.forEach(item=>{
+  private resetMenu() {
+    this.menu.forEach(item => {
       item.active = false
     })
   }
+
+  changeListCourse(text: string) {
+    this.eventSearch.next({
+      text: text
+    })
+  }
+
 }

@@ -1,0 +1,205 @@
+<style>
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .message-box {
+        display: flex;
+        width: 95%;
+        height: 200px;
+        flex-direction: row;
+        border-radius: 20px;
+        padding: 30px;
+        box-sizing: border-box;
+        background-color: #ffe0e2;
+    }
+
+    .message-text {
+        width: 70%;
+        padding: 0% 4% 0% 13%;
+        font-size: 1.0rem;
+        color: #292e4a;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .message-image {
+        width: 30%;
+    }
+
+    .message-image img {
+        max-width: 160px;
+        margin-top: -58px;
+    }
+
+    #name {
+        color: #dc5181;
+        font-weight: bolder;
+        font-size: 2.5rem;
+    }
+
+    .data-section {
+        width: 97%;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .side-ranking,
+    .side-courses {
+        height: 350px;
+        background-color: #FFF;
+        width: 48%;
+        border-radius: 20px;
+        padding: 30px;
+    }
+
+
+    .side-ranking h6,
+    .side-courses h6 {
+        padding-bottom: 10px;
+        border-bottom: solid 2px #f1f5fb;
+        margin-bottom: 20px;
+        color: #4633ff;
+    }
+
+    .item-list {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .item-list p {
+        width: 60%;
+        margin: 0;
+    }
+
+    hr {
+        border-top: solid 2px #f1f5fb;
+    }
+
+    .progress {
+        width: 40%;
+        height: 0.5rem;
+    }
+
+    .value-percent {
+        padding-left: 10px;
+        color: #5a6471;
+    }
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        margin-right: 20px;
+    }
+
+    .avatar img {
+        max-width: 100%;
+    }
+    .item-list a{
+        cursor: pointer;
+    }
+</style>
+
+<div class="flex flex-container">
+
+    <div class="message-box">
+        <div class="message-text">
+
+            <p>
+                <span id=name>Olá Bárbara!!</span><br>
+                As pessoas prestam mais atenção ao treinamento, quando as perguntas são
+                pensadas de forma clara e bem descrita
+            </p>
+
+        </div>
+        <div class="message-image">
+            <img src="./assets/girl.svg" alt="girl">
+        </div>
+
+    </div>
+
+    <div class="data-section">
+
+        <div class="side-ranking">
+            <h6>Ranking Geral</h6>
+            <div class="body-list">
+                <div class="item-list">
+                    <p><span class="text-muted">1</span> - Vicente Tiringa </p>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="value-percent"> 70%</span>
+                </div>
+                <div class="item-list">
+                    <p><span class="text-muted">2</span> - Lopim Virgulino </p>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="value-percent"> 60%</span>
+                </div>
+                <div class="item-list">
+                    <p><span class="text-muted">3</span> - José Saturnino Nunes </p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="value-percent"> 50%</span>
+                </div>
+                <hr>
+                <div class="item-list">
+                    <p><span class="text-muted">10</span> - Fernando Hadadd </p>
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 22%" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="value-percent"> 22%</span>
+                </div>
+                <div class="item-list">
+                    <p><span class="text-muted">11</span> - Dilma Rouseff </p>
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 14%" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="value-percent"> 14%</span>
+                </div>
+                <div class="item-list">
+                    <p><span class="text-muted">12</span> - Luiz Inácio </p>
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 8%" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="value-percent"> 8%</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="side-courses">
+            <h6>Cursos mais populares</h6>
+            <div class="body-list">
+                <div class="item-list" *ngFor="let item of itens">
+                    <div class="avatar">
+                        <img [src]="item.image" alt="imagem-curso">
+                    </div>
+                    <a (click)="enterCourse(item)">{{item.title}}</a>
+                </div>
+            </div>
+
+
+
+        </div>
+        <br><br><br>
+    </div>
+</div>

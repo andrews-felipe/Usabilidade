@@ -18,5 +18,7 @@ export class MenuComponent {
     this.route.navigate([routerName])
   }
 
-}
+
+  }
+
 

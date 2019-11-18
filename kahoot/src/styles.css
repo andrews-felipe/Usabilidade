@@ -10,6 +10,31 @@ body{
     position: relative;
 }
 
+.flex-container {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.box-container-fix {
+    display: flex;
+    width: 75%;
+    height: 100%;
+    flex-direction: column;
+    position: fixed;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+.bg-warning {
+    background-color: #33e3ff!important;
+}
+.bg-success {
+    background-color: #33ff7b!important;
+}
+
+.progress-bar {
+    background-color : #4633FF;
+}
+
 .btn-size-md{
     width: 100px;
     margin-left: 5px;
@@ -37,7 +62,13 @@ body{
 .app-font-color{
     color : #4633FF !important;
 }
-
+thead {
+    border-bottom: solid 2px #f1f5fb;
+}
+.btn-back {
+    font-size: 2rem;
+    color: #4633ff;
+}
 a{
     color: #A8B3C1;
 }
@@ -106,3 +137,4 @@ a:hover{
 .modal-content{
     padding: 25px;
 }
+
