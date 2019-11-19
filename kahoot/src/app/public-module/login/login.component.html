@@ -168,7 +168,7 @@
 
     <div class="nav-header">
       <div id="logo-container">
-        <img src="../../../assets/logo.svg" alt="logo" *ngIf="!login_flag">
+        <img src="../../../assets/logo.svg" alt="logo" *ngIf="!login_flag && !sigup_flag">
       </div>
       <div class="list-menu">
         <ul id="menu">
@@ -258,7 +258,7 @@
             para mais de 1 bilhão de jogadores
             todos os anos em escolas e empresas.
           </p>
-          <button class="btn btn-primary" id="button-bootstrap" (click)="sigup_flag = !sigup_flag">Começar</button>
+          <button class="btn btn-primary" id="button-bootstrap" (click)="sigup_flag = true">Começar</button>
         </div>
 
         <div *ngIf="login_flag">
