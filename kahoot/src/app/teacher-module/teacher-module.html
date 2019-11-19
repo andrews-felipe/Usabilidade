@@ -8,14 +8,40 @@
         height: 100%;
     }
 
-    .left-flex {
-        width: 20%;
-        height: 100%;
+    @media screen and (max-width : 1439px) {
+        .left-flex {
+            width: 20%;
+            height: 100%;
+        }
+
+        .center-flex {
+            width: 85%;
+            height: 100%;
+        }
     }
 
-    .center-flex {
-        width: 80%;
-        height: 100%;
+    @media screen and (min-width : 1440px) {
+        .left-flex {
+            width: 15%;
+            height: 100%;
+        }
+
+        .center-flex {
+            width: 85%;
+            height: 100%;
+        }
+    }
+
+    @media screen and (min-width : 1920px) {
+        .left-flex {
+            width: 15%;
+            height: 100%;
+        }
+
+        .center-flex {
+            width: 90%;
+            height: 100%;
+        }
     }
 </style>
 

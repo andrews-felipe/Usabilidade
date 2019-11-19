@@ -74,6 +74,7 @@ a{
 }
 a:hover{
     color : #4633FF !important;
+    text-decoration: none;
 }
 
 .active{
@@ -136,5 +137,15 @@ a:hover{
 
 .modal-content{
     padding: 25px;
+}
+
+.gold{
+    background-color: #ffdea5;
+}
+.silver{
+    background-color: #cddbec;
+}
+.brown{
+    background-color: #ffe0e2;
 }
 

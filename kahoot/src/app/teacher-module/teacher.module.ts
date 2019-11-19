@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { CursoComponent } from './course/course-detail/curso.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from '../components/footer/footer.component';
 
 const routes: Routes = [
   {
@@ -40,7 +41,8 @@ const routes: Routes = [
     CriarCursoComponent,
     DashboardComponent,
     RankingComponent,
-    CursoComponent
+    CursoComponent,
+    FooterComponent
   ],
   imports: [
     RouterModule.forChild(routes),

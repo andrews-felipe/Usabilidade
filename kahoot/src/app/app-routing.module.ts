@@ -6,7 +6,7 @@ import { LoginComponent } from './public-module/login/login.component';
 
 const routes: Routes = [
 
-  { path: '', redirectTo: 'teacher', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
 
   { path: 'cadastro', component: CadastroComponent },
   { path: 'login', component: LoginComponent },
