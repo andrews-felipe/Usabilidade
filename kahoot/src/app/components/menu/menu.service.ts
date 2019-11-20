@@ -7,6 +7,8 @@ import { Subject } from 'rxjs';
 export class MenuService {
 
 
+  public flag_user : boolean
+
   eventSearch: Subject<any> = new Subject<any>();
 
 
@@ -23,24 +25,24 @@ export class MenuService {
       class: "fa fa-graduation-cap",
       active: false
     },
-    {
-      name: "Histórico",
-      route: 'painel-gestor',
-      class: "fa fa-history",
-      active: false
-    },
-    {
-      name: "Usuários",
-      route: 'painel-gestor',
-      class: "fa fa-users",
-      active: false
-    },
-    {
-      name: "Config",
-      route: 'painel-gestor',
-      class: "fa fa-cog",
-      active: false
-    }
+    // {
+    //   name: "Histórico",
+    //   route: 'painel-gestor',
+    //   class: "fa fa-history",
+    //   active: false
+    // },
+    // {
+    //   name: "Usuários",
+    //   route: 'painel-gestor',
+    //   class: "fa fa-users",
+    //   active: false
+    // },
+    // {
+    //   name: "Config",
+    //   route: 'painel-gestor',
+    //   class: "fa fa-cog",
+    //   active: false
+    // }
   ]
 
   constructor() { }
@@ -63,7 +65,7 @@ export class MenuService {
    * Retorna o nome do item ativo para o upbar component mostrar o label
    */
   get activeMenu() {
-    for (const item in this.menu) {
+    for (const item of this.menu) {
       if (item['active']) return item['name']
     }
   }

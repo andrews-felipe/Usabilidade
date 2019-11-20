@@ -55,23 +55,31 @@
 
     <div class="upbar-container">
         <div class="header-title">
-            <p class="title-page">{{title_page}}</p>
+            <p class="title-page">{{service.activeMenu}}</p>
         </div>
 
         <div id="search-box">
-            <form class="form-inline my-2 my-lg-0">
-                <input placeholder="Pesquisar" [(ngModel)]="text" (ngModelChange)="valuechange()" [ngModelOptions]="{standalone: true}">
+            <form class="form-inline my-2 my-lg-0" *ngIf="service.activeMenu == 'Cursos'">
+                <input placeholder="Pesquisar" [(ngModel)]="text" (ngModelChange)="valuechange()"
+                    [ngModelOptions]="{standalone: true}">
                 <button class="btn btn-info btn-size-md"><span class="fa fa-filter"></span> Filtrar</button>
-                <button class="btn btn-primary btn-size-md" routerLink="/criar-curso">Criar</button>
+                <button class="btn btn-primary btn-size-md" (click)="setModal()" *ngIf="!service.flag_user">Criar</button>
             </form>
         </div>
 
         <div id="profile-photo">
             <div class="avatar">
-                <img src="http://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
-                    alt="">
+                <img *ngIf="!service.flag_user"
+                    src="http://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg" alt="">
+                <img *ngIf="service.flag_user"
+                    src="./assets/tiringa.jpg" alt="">
             </div>
         </div>
 
     </div>
+</div>
+<div *ngIf="flag_create">
+
+    <app-create-course (closeEvent)="setModal()"></app-create-course>
+
 </div>

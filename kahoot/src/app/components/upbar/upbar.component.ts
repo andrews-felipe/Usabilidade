@@ -8,16 +8,23 @@ import { MenuService } from '../menu/menu.service';
 })
 export class UpbarComponent implements OnInit {
 
-  title_page : string = "Cursos"
+  flag_create: boolean
   text = ""
 
-  constructor(private service : MenuService) { }
+
+  constructor(private service: MenuService) { }
 
   ngOnInit() {
   }
 
-  valuechange(){
-      this.service.changeListCourse(this.text)
-    
+  valuechange() {
+    this.service.changeListCourse(this.text)
+
   }
+
+  setModal() {
+    this.flag_create = !this.flag_create
+  }
+
+
 }

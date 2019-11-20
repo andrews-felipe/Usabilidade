@@ -4,7 +4,12 @@
     margin-left: auto;
     margin-right: auto;
 }
-.table-bordered{
+.table{
     background-color: white;
     width: 90%;
+    border-radius: 10px;
+}
+.btn-light{
+    color:#4633FF !important;
+    background-color: #F1F5FB !important;
 }

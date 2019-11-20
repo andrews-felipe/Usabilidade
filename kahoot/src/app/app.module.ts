@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CadastroComponent } from './public-module/cadastro/cadastro.component';
 import { LoginComponent } from './public-module/login/login.component';
 import { MenuService } from './components/menu/menu.service';
+import { DashboardComponent } from './studant-module/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [

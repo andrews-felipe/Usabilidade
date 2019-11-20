@@ -166,7 +166,8 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <a class="dropdown-item" href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-eraser" aria-hidden="true"></i> Renomear</a>
-                        <a class="dropdown-item" routerLink="/ranking"><i class="fa fa-users" aria-hidden="true"></i>
+                        <a class="dropdown-item" routerLink="/teacher/ranking"><i class="fa fa-users"
+                                aria-hidden="true"></i>
                             Ranking</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</a>
                     </div>
@@ -244,7 +245,7 @@
 
             <div class="list-questions">
                 Adicionar questão
-                <button class="btn btn-plus" type="button" data-toggle="modal" data-target="#modal"><span
+                <button class="btn btn-plus" type="button" data-toggle="modal" data-target="#exampleModal"><span
                         class="fa fa-plus-circle" aria-hidden="true"></span></button>
                 <div class="question" *ngFor="let item of questions">
                     <div>
@@ -321,7 +322,7 @@
                     <input type="text" class="form-control" aria-label="Text input with radio button"
                         placeholder="Resposta">
                 </div>
-                
+
                 <div class="radioboxes-container">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
@@ -346,6 +347,103 @@
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                 <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="add()">Adicionar</button>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Título</h6>
+                <input type="text" class="form-control" placeholder="Nome" aria-label="Username"
+                    aria-describedby="addon-wrapping">
+                <div class="input-group mb-3">
+                    <img src="./assets/galleryIcon.png">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile02">
+                        <label class="custom-file-label" for="inputGroupFile02"
+                            aria-describedby="inputGroupFileAddon02">Escolha
+                            uma foto ou vídeo</label>
+                    </div>
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                    </div>
+                </div>
+                <h6>Conteúdo</h6>
+                <textarea class="textarea" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <h6>Resposta</h6>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" aria-label="Radio button for following text input">
+                        </div>
+                    </div>
+                    <input type="text" class="form-controlBox" aria-label="Text input with radio button">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" aria-label="Radio button for following text input">
+                        </div>
+                    </div>
+                    <input type="text" class="form-controlBox" aria-label="Text input with radio button">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" aria-label="Radio button for following text input">
+                        </div>
+                    </div>
+                    <input type="text" class="form-controlBox" aria-label="Text input with radio button">
+                </div>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Difícil</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Médio</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                        value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Fácil</label>
+                </div>
+
+            </div>
+            <div class="btn-group" style="width: 100%;">
+                &nbsp;
+                <button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                &nbsp;
+            </div>
+
         </div>
     </div>
 </div>
