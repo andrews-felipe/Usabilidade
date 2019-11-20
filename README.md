@@ -1,2 +1,0 @@
-# Usabilidade
-Projeto da disciplina
